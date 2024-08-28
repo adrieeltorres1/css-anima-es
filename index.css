@@ -1,0 +1,57 @@
+* {
+    /* Margin é o espaçamento externo */
+    margin: 0; 
+    /* Padding é o espaçamento interno */
+    padding: 0;
+    border: 0;
+    outline: none; 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.ipt {
+    border: 2px solid #27a51b;
+    border-radius: 4px;
+    &:focus {
+        border-color: #2bf918;
+    }
+}
+
+.btn {
+    background-color: #27a51b;  
+    color: black;
+    transition-duration: 300ms;
+    margin-left: 20px;
+    border-radius: 4px;
+    border: 2px solid #27a51b;
+    &:hover{
+        /* transform: translate(50%, -50%);
+        transform-origin: center center; */
+        animation: pular linear infinite 2s;
+        /* animation-name: pular;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal; */
+        background-color:#2bf918;
+    }
+}
+
+/* Quando for do ponto A à B eu uso (from() e to(), mas quando for A-B-C uso propriedades 0% 50% 100%*/
+
+@keyframes pular {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
